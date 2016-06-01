@@ -1,6 +1,6 @@
 package com.google.maps.ws.util;
 
-import com.google.maps.ws.exceptions.InvalidCoordinatesException;
+import com.google.maps.ws.exceptions.InvalidParameterException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -15,22 +15,22 @@ public class UtilitiesTest {
         Assert.assertTrue(true);
     }
 
-    @Test(expected = InvalidCoordinatesException.class)
+    @Test(expected = InvalidParameterException.class)
     public void testInvalidCoordinatesNoDot() throws Exception {
         Utilities.validateCoordinate("1");
     }
 
-    @Test(expected = InvalidCoordinatesException.class)
+    @Test(expected = InvalidParameterException.class)
     public void testInvalidCoordinatesDot() throws Exception {
         Utilities.validateCoordinate("1.");
     }
 
-    @Test(expected = InvalidCoordinatesException.class)
+    @Test(expected = InvalidParameterException.class)
     public void testInvalidCoordinatesTooBigValue() throws Exception {
         Utilities.validateCoordinate("1000.0");
     }
 
-    @Test(expected = InvalidCoordinatesException.class)
+    @Test(expected = InvalidParameterException.class)
     public void testInvalidCoordinatesString() throws Exception {
         Utilities.validateCoordinate("X");
     }

@@ -60,7 +60,7 @@ public class GoogleMapsApiControllerTest {
                 .contentType(MediaType.APPLICATION_JSON).content(convertObjectToJsonBytes(response));
 
         mockMvc.perform(builder).andExpect(MockMvcResultMatchers.status().isOk());
-        verify(googleMapsApiService, times(1)).searchPlaces(anyString(), anyString());
+        verify(googleMapsApiService, times(1)).searchPlaces(anyString(), anyString(), anyString());
         verifyNoMoreInteractions(googleMapsApiService);
     }
 

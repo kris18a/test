@@ -1,20 +1,21 @@
 package com.google.maps.ws.exceptions;
 
 /**
+ * Exception thrown when one of the config values is invalid.
  * Created by X on 1/06/2016.
  */
-public final class InvalidCoordinatesException extends Exception {
+public class InvalidConfigurationException extends RuntimeException {
     /**
      * Default constructor.
      */
-    public InvalidCoordinatesException() {
+    public InvalidConfigurationException() {
     }
 
     /**
      * Constructor with parameters.
      * @param message the message
      */
-    public InvalidCoordinatesException(final String message) {
+    public InvalidConfigurationException(final String message) {
         super(message);
     }
 }

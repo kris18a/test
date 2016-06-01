@@ -9,7 +9,7 @@
 
     <context:component-scan base-package="com.google.maps.ws" />
     <bean id="googleApiBaseUrl" class="java.lang.String">
-        <constructor-arg value="https://maps.googleapis.com/maps/api/place/search/json?location={0},{1}&amp;radius=1000&amp;types=food&amp;sensor=false&amp;key={2}"/>
+        <constructor-arg value="https://maps.googleapis.com/maps/api/place/search/json?location={0},{1}&amp;radius=1000&amp;types={2}&amp;key={3}"/>
     </bean>
     <bean id="googleApiKey" class="java.lang.String">
         <constructor-arg value="AIzaSyCg_4yaQqguT1frWcnvp_irsIo7ayYH85w"/>

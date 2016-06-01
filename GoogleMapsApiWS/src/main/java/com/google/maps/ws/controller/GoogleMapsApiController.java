@@ -1,6 +1,7 @@
 package com.google.maps.ws.controller;
 
-import com.google.maps.ws.exceptions.InvalidCoordinatesException;
+import com.google.maps.ws.exceptions.InvalidConfigurationException;
+import com.google.maps.ws.exceptions.InvalidParameterException;
 import com.google.maps.ws.model.PlaceResponse;
 import com.google.maps.ws.service.GoogleMapsApiService;
 import com.google.maps.ws.util.Utilities;
@@ -28,14 +29,15 @@ public class GoogleMapsApiController {
 
     @RequestMapping(value = "/searchPlaces", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity searchPlaces(@RequestParam(defaultValue = "43.768353") String latitude,
-                                       @RequestParam(defaultValue = "-79.4130463") String longitude) {
+                                       @RequestParam(defaultValue = "-79.4130463") String longitude,
+                                       @RequestParam(defaultValue = "food") String placeType) {
         try {
-            LOG.info(String.format("Searching for places around (%s, %s) GPS coordinates", latitude, longitude));
+            LOG.info(String.format("Searching for %s places around (%s, %s) GPS coordinates", placeType, latitude, longitude));
             Utilities.validateCoordinate(latitude);
             Utilities.validateCoordinate(longitude);
-            final PlaceResponse pr = googleMapsApiService.searchPlaces(latitude, longitude);
+            final PlaceResponse pr = googleMapsApiService.searchPlaces(placeType, latitude, longitude);
             return ResponseEntity.ok(pr);
-        } catch (InvalidCoordinatesException ex) {
+        } catch (InvalidParameterException | InvalidConfigurationException ex) {
             LOG.error(ex.getMessage(), ex);
             return ResponseEntity
                     .status(HttpStatus.FORBIDDEN)
