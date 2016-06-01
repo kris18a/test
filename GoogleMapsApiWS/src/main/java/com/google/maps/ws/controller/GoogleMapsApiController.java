@@ -30,6 +30,7 @@ public class GoogleMapsApiController {
     public ResponseEntity searchPlaces(@RequestParam(defaultValue = "43.768353") String latitude,
                                        @RequestParam(defaultValue = "-79.4130463") String longitude) {
         try {
+            LOG.info(String.format("Searching for places around (%s, %s) GPS coordinates", latitude, longitude));
             Utilities.validateCoordinate(latitude);
             Utilities.validateCoordinate(longitude);
             final PlaceResponse pr = googleMapsApiService.searchPlaces(latitude, longitude);
