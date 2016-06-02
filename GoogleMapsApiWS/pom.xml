@@ -67,7 +67,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>fully.qualified.MainClass</mainClass>
+                            <mainClass>com.google.maps.ws.Application</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
