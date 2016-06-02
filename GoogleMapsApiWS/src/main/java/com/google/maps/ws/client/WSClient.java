@@ -15,8 +15,11 @@ import java.net.URL;
 public class WSClient {
     public static void main(String[] args) {
         try {
-
-            URL url = new URL(args[0]);
+            String urlString = "http://localhost:8080/searchPlaces?location=43.768353,-79.41304630000002&type=restaurant";
+            if (args != null && args.length > 0) {
+                urlString = args[0];
+            }
+            URL url = new URL(urlString);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/json");
