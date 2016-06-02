@@ -1,0 +1,13 @@
+/Users/X/Desktop/CA_Jobs_Toronto/test/GoogleMapsApiWS/src/main/java/com/google/maps/ws/model/Geometry.java
+/Users/X/Desktop/CA_Jobs_Toronto/test/GoogleMapsApiWS/src/main/java/com/google/maps/ws/service/GoogleMapsApiService.java
+/Users/X/Desktop/CA_Jobs_Toronto/test/GoogleMapsApiWS/src/main/java/com/google/maps/ws/model/Place.java
+/Users/X/Desktop/CA_Jobs_Toronto/test/GoogleMapsApiWS/src/main/java/com/google/maps/ws/model/PlaceResponse.java
+/Users/X/Desktop/CA_Jobs_Toronto/test/GoogleMapsApiWS/src/main/java/com/google/maps/ws/util/Utilities.java
+/Users/X/Desktop/CA_Jobs_Toronto/test/GoogleMapsApiWS/src/main/java/com/google/maps/ws/model/OpeningHours.java
+/Users/X/Desktop/CA_Jobs_Toronto/test/GoogleMapsApiWS/src/main/java/com/google/maps/ws/Application.java
+/Users/X/Desktop/CA_Jobs_Toronto/test/GoogleMapsApiWS/src/main/java/com/google/maps/ws/controller/GoogleMapsApiController.java
+/Users/X/Desktop/CA_Jobs_Toronto/test/GoogleMapsApiWS/src/main/java/com/google/maps/ws/model/Location.java
+/Users/X/Desktop/CA_Jobs_Toronto/test/GoogleMapsApiWS/src/main/java/com/google/maps/ws/service/GoogleMapsApiServiceImpl.java
+/Users/X/Desktop/CA_Jobs_Toronto/test/GoogleMapsApiWS/src/main/java/com/google/maps/ws/exceptions/InvalidConfigurationException.java
+/Users/X/Desktop/CA_Jobs_Toronto/test/GoogleMapsApiWS/src/main/java/com/google/maps/ws/client/WSClient.java
+/Users/X/Desktop/CA_Jobs_Toronto/test/GoogleMapsApiWS/src/main/java/com/google/maps/ws/exceptions/InvalidParameterException.java
