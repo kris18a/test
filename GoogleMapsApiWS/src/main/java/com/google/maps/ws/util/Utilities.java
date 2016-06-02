@@ -22,7 +22,7 @@ public final class Utilities {
      * @throws InvalidParameterException if the coordinate is not valid
      */
     public static void validateCoordinate(String coordinate) throws InvalidParameterException {
-        String regex_coords = "-?[1-9]{1}[0-9]{0,2}[.][0-9]+";
+        String regex_coords = "-?([1-8]?[1-9]|[1-9]0)\\.{1}\\d{1,6}";
         Pattern compiledPattern = Pattern.compile(regex_coords, Pattern.CASE_INSENSITIVE);
         Matcher matcher = compiledPattern.matcher(coordinate);
         if (!matcher.find()) {
