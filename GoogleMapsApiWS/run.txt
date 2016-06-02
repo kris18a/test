@@ -1,0 +1,3 @@
+--change folder to target
+
+java -cp "classes/lib/*" -jar web-service-sample-1.0-SNAPSHOT.jar

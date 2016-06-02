@@ -1,0 +1,3 @@
+com/google/maps/ws/controller/GoogleMapsApiControllerTest.class
+com/google/maps/ws/service/GoogleMapsApiServiceTest.class
+com/google/maps/ws/util/UtilitiesTest.class
